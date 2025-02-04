@@ -1,0 +1,32 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Christopher Gjøvåg
+	email = christopher.gjovag@knowit.no
+[core]
+	editor = vim
+	pager = LESSCHARSET=utf-8 delta
+	autocrlf = input
+	quotepath = off
+[delta]
+	navigate = true
+	light = false
+[merge]
+	tool = vscode
+	conflictstyle = zdiff3
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[diff]
+	tool = vscode
+	colorMoved = default
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[pager]
+	# log = LESSCHARSET=utf-8 more -FR
+	# reflog = LESSCHARSET=utf-8 more -FR
+	branch = false
+[advice]
+	addIgnoredFile = false
+[init]
+	defaultBranch = main
+[interactive]
+	conflictstyle = zdiff3

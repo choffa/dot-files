@@ -1,0 +1,77 @@
+[aws]
+symbol = " "
+format = "on [$symbol$profile]($style) "
+[aws.region_aliases]
+eu-central-1 = "de"
+eu-north-1 = "se"
+
+[battery]
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = ""
+
+[conda]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+format = 'via [${symbol}${pyenv_prefix}(${version})(\($virtualenv\) )]($style)'
+symbol = " "
+python_binary = "python3"
+detect_extensions = [""]
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[kubernetes]
+disabled = false
+[kubernetes.context_aliases]
+".*/api-cp-(?P<var_env>[\\w]+)-domstol-no:.*/.*" = "da-$var_env"
+
