@@ -72,6 +72,6 @@ symbol = " "
 
 [kubernetes]
 disabled = false
-[kubernetes.context_aliases]
-".*/api-cp-(?P<var_env>[\\w]+)-domstol-no:.*/.*" = "da-$var_env"
-
+contexts = [
+	{ context_pattern=".*/api-ocp-(?P<var_env>[\\w]+)-domstol-no:.*/.*", context_alias="da-$var_env" }
+]
