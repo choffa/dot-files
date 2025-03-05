@@ -16,13 +16,14 @@
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
 [diff]
+	algorithm = histogram
 	tool = vscode
-	colorMoved = default
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
 [difftool "vscode"]
 	cmd = code --wait --diff $LOCAL $REMOTE
 [pager]
-	# log = LESSCHARSET=utf-8 more -FR
-	# reflog = LESSCHARSET=utf-8 more -FR
 	branch = false
 [advice]
 	addIgnoredFile = false
@@ -30,3 +31,19 @@
 	defaultBranch = main
 [interactive]
 	conflictstyle = zdiff3
+[branch]
+	sort = -committerdate
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[column]
+	ui = auto
+[tag]
+	sort = version:refname
+[help]
+	autocorrect = prompt
