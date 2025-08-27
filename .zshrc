@@ -6,7 +6,7 @@ eval "$(jenv init -)"
 # If you come from bash you might have to change your $PATH.
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/christopher/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -73,7 +73,7 @@ export ZSH="/Users/christopher/.oh-my-zsh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 SHOW_AWS_PROMPT=false
-plugins=(git gitignore zsh-nvm aws)
+plugins=(git gitignore zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,10 +102,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gtsc="gatsby clean"
-alias gtsd="gatsby develop"
-alias gtsb="gatsby build"
-alias gtss="gatsby serve"
 alias bash5="/usr/local/opt/bash/bin/bash"
 alias activate="source env/bin/activate"
 
@@ -124,14 +120,7 @@ export SAM_CLI_TELEMETRY=0
 
 export LANG=no_NO.UTF-8
 
-# Openshift/Bastion Domstolene
-alias ocp-prod="oc login https://api.cp.ads.domstol.no:6443/ -u adminek.cgj"
-alias ocp-at="oc login https://api.cp.at.domstol.no:6443/ -u adminek.cgj"
-alias ocp-test="oc login https://api.cp.test.domstol.no:6443/ -u adminek.cgj"
 
-alias bastiontunell="sudo ssh -i /Users/christopher/.ssh/id_domstol_bastion -L 6443:api.cp.ads.domstol.no:6443 -L 443:console.apps.cp.ads.domstol.no:443 adminek.cgj@10.242.159.4"
-
-alias kbinit="kubebuilder init --domain my-domain.no --repo github.com/user/repo --project-name my-operator"
-alias kbrsrc="kubebuilder create api --group eksempel --version v1 --kind MyResource --resource --controller"
-
-. "/Users/christopher/.deno/env"
+# alias kbinit="kubebuilder init --domain my-domain.no --repo github.com/user/repo --project-name my-operator"
+# alias kbrsrc="kubebuilder create api --group eksempel --version v1 --kind MyResource --resource --controller"
+alias k=kubectl
