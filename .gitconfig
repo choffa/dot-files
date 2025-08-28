@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
 	name = Christopher Gjøvåg
-	email = christopher.gjovag@knowit.no
+	email = christopher.gjovag@soprasteria.com
 [core]
 	editor = vim
 	pager = LESSCHARSET=utf-8 delta
